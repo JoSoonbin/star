@@ -1,6 +1,6 @@
 public class Marine extends Unit implements Fastable{
     public Marine() {
-        super(5);
+        super(5, 3);
     }
 
     void useSteamPack(){

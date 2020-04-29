@@ -1,15 +1,18 @@
 public abstract class Unit {
-    public Unit(int hp)
+    protected Unit(int hp, int attackCount)
     {
         this.hp = hp;
+        this.attackCount = attackCount;
         speed = 3;
     }
 
     private int hp;
+    private int attackCount;
 
     public int getHP() {
         return hp;
     }
+    public int getAttackCount() {return attackCount;}
 
     public void getDamaged(int damage){
         while (damage > 0 && hp > 0){
@@ -26,5 +29,10 @@ public abstract class Unit {
 
     public String getStatus(){
         return getUnitName() +  " HP:" + getHP();
+    }
+
+    public void heal(int healPoint) {
+        hp += healPoint;
+        System.out.println("Heal: " + hp);
     }
 }

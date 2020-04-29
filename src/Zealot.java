@@ -1,6 +1,6 @@
 public class Zealot extends ProtossUnit implements Fastable {
     public Zealot() {
-        super(5, 5);
+        super(5, 3, 5);
     }
 
     public void balup() {
@@ -20,5 +20,9 @@ public class Zealot extends ProtossUnit implements Fastable {
     @Override
     public String getStatus() {
         return "[Zealot] HP:" + getHP() + ", Shield:" + getShield();
+    }
+
+    protected String getUnitName(){
+        return "Zealot";
     }
 }
