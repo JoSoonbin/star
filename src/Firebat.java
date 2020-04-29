@@ -1,6 +1,6 @@
 public class Firebat extends Unit{
     public Firebat() {
-        super(10, 4);
+        super(10, 5);
     }
 
     @Override

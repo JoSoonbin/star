@@ -19,4 +19,10 @@ public class ProtossUnit extends Unit {
 
         super.getDamaged(damage);
     }
+
+    @Override
+    public void recovery(int point){
+        shield += point;
+        System.out.println("!recovery:" + shield);
+    }
 }

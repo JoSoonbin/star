@@ -31,8 +31,8 @@ public abstract class Unit {
         return getUnitName() +  " HP:" + getHP();
     }
 
-    public void heal(int healPoint) {
-        hp += healPoint;
-        System.out.println("Heal: " + hp);
+    public void recovery(int point) {
+        hp += point;
+        System.out.println("!recovery:" + hp);
     }
 }

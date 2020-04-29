@@ -36,7 +36,7 @@ public class Main {
                 break;
             } else {
                 if(Defender.getHP() <= (maxHP / 2))
-                    Defender.heal(attackPoint);
+                    Defender.recovery(attackPoint);
             }
         }
     }
