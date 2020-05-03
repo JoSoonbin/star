@@ -10,33 +10,34 @@ public class Main {
 //        getDamagedSeveralTimes(z1, 3);
 //        getDamagedSeveralTimes(f1, 3);
 
-        getAttackSeveralTimes(f1, z1);
-//        getAttackSeveralTimes(f1, m1);
-
+//        attackSeveralTimes(f1, z1);
+//          attackSeveralTimes(f1, m1);
+        System.out.println(m1.getAttackCount());
 //        makeItFaster((Marine) m1, 2);
 //        makeItFaster(z1, 2);
     }
 
-    private static void getAttackSeveralTimes(Unit Attacker, Unit Defender) {
+    private static void attackSeveralTimes(Unit attacker, Unit defender) {
         Random random = new Random();
 
-        System.out.println(Attacker.getUnitName()+"공격횟수: "+ Attacker.getAttackCount());
-        System.out.println(Defender.getUnitName()+"HP: "+ Defender.getHP());
+        System.out.println(attacker.getUnitName()+"공격횟수: "+ attacker.getAttackCount());
+        System.out.println(defender.getUnitName()+"HP: "+ defender.getHP());
 
-        int maxHP = Defender.getHP();
 
-        for (int i = 0; i < Attacker.getAttackCount(); i++) {
+        int initialHP = defender.getHP();
+
+        for (int i = 0; i < attacker.getAttackCount(); i++) {
             int attackPoint = random.nextInt(3) + 1;
-            Defender.getDamaged(attackPoint);
+            defender.getDamaged(attackPoint);
 
-            System.out.println("[Attacker] AP: " + attackPoint + " -> [Defender]" + Defender.getStatus());
+            System.out.println("[attacker] AP: " + attackPoint + " -> [defender]" + defender.getStatus());
 
-            if (Defender.getHP() <= 0) {
+            if (defender.getHP() <= 0) {
                 System.out.println("dead");
                 break;
             } else {
-                if(Defender.getHP() <= (maxHP / 2))
-                    Defender.recovery(attackPoint);
+                if(defender.getHP() <= (initialHP / 2))
+                    defender.recovery(attackPoint);
             }
         }
     }

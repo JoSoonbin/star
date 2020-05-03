@@ -1,6 +1,6 @@
 public class ProtossUnit extends Unit {
-    public ProtossUnit(int hp, int attackCount, int shield) {
-        super(hp, attackCount);
+    public ProtossUnit(int hp, int shield) {
+        super(hp);
         this.shield = shield;
     }
 

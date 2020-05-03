@@ -1,7 +1,11 @@
 public class Marine extends Unit implements Fastable{
     public Marine() {
-        super(5, 3);
+        super(5);
+        attackCount = marineAttackCount;
     }
+
+    private int attackCount;
+    public int getAttackCount() {return attackCount;}
 
     void useSteamPack(){
         speed *= 2;

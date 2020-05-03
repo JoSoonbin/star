@@ -1,18 +1,20 @@
 public abstract class Unit {
-    protected Unit(int hp, int attackCount)
+    protected Unit(int hp)
     {
         this.hp = hp;
-        this.attackCount = attackCount;
         speed = 3;
     }
 
     private int hp;
-    private int attackCount;
+    protected static int marineAttackCount = 4;
+    private static int FirebatAttackCount = 2;
+    private static int ZealotAttackCount = 3;
+    private static int DragoonAttackCount = 2;
 
     public int getHP() {
         return hp;
     }
-    public int getAttackCount() {return attackCount;}
+    public int getAttackCount() {return marineAttackCount;}
 
     public void getDamaged(int damage){
         while (damage > 0 && hp > 0){
