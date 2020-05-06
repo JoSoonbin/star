@@ -7,27 +7,20 @@ public class Main {
         Unit f1 = new Firebat();
         Zealot z1 = new Zealot();
 
-//        getDamagedSeveralTimes(z1, 3);
-//        getDamagedSeveralTimes(f1, 3);
-
-//        attackSeveralTimes(f1, z1);
-//          attackSeveralTimes(f1, m1);
-        System.out.println(m1.getAttackCount());
-//        makeItFaster((Marine) m1, 2);
-//        makeItFaster(z1, 2);
+        attackSeveralTimes(f1, z1);
+//        attackSeveralTimes(f1, m1);
     }
 
     private static void attackSeveralTimes(Unit attacker, Unit defender) {
         Random random = new Random();
 
-        System.out.println(attacker.getUnitName()+"공격횟수: "+ attacker.getAttackCount());
+        System.out.println(attacker.getUnitName()+" 공격횟수: "+ attacker.getAttackCount());
         System.out.println(defender.getUnitName()+"HP: "+ defender.getHP());
-
 
         int initialHP = defender.getHP();
 
         for (int i = 0; i < attacker.getAttackCount(); i++) {
-            int attackPoint = random.nextInt(3) + 1;
+            int attackPoint = random.nextInt(4) + 1;
             defender.getDamaged(attackPoint);
 
             System.out.println("[attacker] AP: " + attackPoint + " -> [defender]" + defender.getStatus());

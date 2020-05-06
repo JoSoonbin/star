@@ -1,7 +1,10 @@
 public class Zealot extends ProtossUnit implements Fastable {
     public Zealot() {
         super(5, 3);
+        attackCount = zealotAttackCount;
     }
+
+    private int attackCount;
 
     public void balup() {
         speed += 3;

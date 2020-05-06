@@ -7,9 +7,9 @@ public abstract class Unit {
 
     private int hp;
     protected static int marineAttackCount = 4;
-    private static int FirebatAttackCount = 2;
-    private static int ZealotAttackCount = 3;
-    private static int DragoonAttackCount = 2;
+    protected static int firebatAttackCount = 2;
+    protected static int zealotAttackCount = 3;
+    protected static int dragoonAttackCount = 2;
 
     public int getHP() {
         return hp;
@@ -35,6 +35,6 @@ public abstract class Unit {
 
     public void recovery(int point) {
         hp += point;
-        System.out.println("!recovery:" + hp);
+        System.out.println("(recovery) hp: " + hp);
     }
 }

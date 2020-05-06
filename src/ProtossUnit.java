@@ -23,6 +23,6 @@ public class ProtossUnit extends Unit {
     @Override
     public void recovery(int point){
         shield += point;
-        System.out.println("!recovery:" + shield);
+        System.out.println("(recovery) shield: " + shield);
     }
 }
